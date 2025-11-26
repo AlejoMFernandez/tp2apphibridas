@@ -28,10 +28,51 @@ GOALDEMY es una aplicación completa que permite a los usuarios autenticados ges
 - Vite como build tool
 - CSS moderno
 
+## 🚀 Cómo Inicializar el Proyecto
+
+### Requisitos Previos
+- Node.js instalado (v16 o superior)
+- MongoDB Atlas configurado (o usar la conexión proporcionada)
+
+### Paso 1: Backend
+
+```bash
+# Navegar al backend
+cd back
+
+# Instalar dependencias
+npm install
+
+# Ejecutar servidor
+node server.js
+```
+
+**El backend estará corriendo en:** `http://localhost:2025`
+
+### Paso 2: Frontend (en otra terminal)
+
+```bash
+# Navegar al frontend
+cd front
+
+# Instalar dependencias
+npm install
+
+# Ejecutar aplicación
+npm run dev
+```
+
+**El frontend estará corriendo en:** `http://localhost:5173`
+
+### ✅ ¡Listo!
+Abre tu navegador en `http://localhost:5173` y comienza a usar GOALDEMY.
+
+---
+
 ## Estructura del Proyecto
 
 ```
-MiProyecto/
+tp2apphibridas/
 ├── back/                       # Backend API REST
 │   ├── api/
 │   │   ├── controllers/        # Controladores de la API
@@ -77,48 +118,7 @@ MiProyecto/
     │   ├── main.jsx          # Punto de entrada
     │   └── App.jsx
     └── package.json
-
 ```
-
-## Instalación y Configuración
-
-### Backend
-
-1. Navegar a la carpeta del backend:
-```bash
-cd back
-```
-
-2. Instalar dependencias:
-```bash
-npm install
-```
-
-3. Ejecutar en modo desarrollo:
-```bash
-npm run dev
-```
-
-El backend estará corriendo en `http://localhost:2025`
-
-### Frontend
-
-1. Navegar a la carpeta del frontend:
-```bash
-cd front
-```
-
-2. Instalar dependencias:
-```bash
-npm install
-```
-
-3. Ejecutar en modo desarrollo:
-```bash
-npm run dev
-```
-
-El frontend estará corriendo en `http://localhost:5173`
 
 ## Arquitectura de la Aplicación
 
