@@ -10,12 +10,6 @@
   align-items: center;
   margin-bottom: 2.5rem;
   animation: slideIn 0.5s ease;
-  padding: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  height: 0;
-  overflow: hidden;
 }
 
 .teams-header h1 {

@@ -77,16 +77,16 @@ export async function getPlayerById(jugadorId) {
     return null
 }
 
-// Guardar nuevo jugador (esto dependerá de tu lógica de negocio)
+// Guardar nuevo jugador 
 export async function guardarPlayer(jugador) {
     await client.connect()
     // Aquí deberías agregar el jugador a un equipo específico
-    return db.collection("players").insertOne(jugador)
+    return db.collection("teamsANDplayers").insertOne(jugador)
 }
 
 // Editar jugador
 export function editarPlayer(id, jugador) {
-    return db.collection("players").updateOne(
+    return db.collection("teamsANDplayers").updateOne(
         { _id: new ObjectId(id) }, 
         { $set: jugador }
     )
@@ -94,7 +94,7 @@ export function editarPlayer(id, jugador) {
 
 // Eliminar jugador (soft delete)
 export function eliminarPlayer(id) {
-    return db.collection("players").updateOne(
+    return db.collection("teamsANDplayers").updateOne(
         { _id: new ObjectId(id) }, 
         { $set: { eliminado: true } }
     )
@@ -102,7 +102,7 @@ export function eliminarPlayer(id) {
 
 // Reemplazar jugador por ID
 export function reemplazarPlayer(id, jugador) {
-    return db.collection("players").replaceOne(
+    return db.collection("teamsANDplayers").replaceOne(
         { _id: new ObjectId(id) }, 
         jugador
     )
